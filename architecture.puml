@@ -1,0 +1,23 @@
+@startuml
+
+queue "car (exchange)"
+
+queue "mini-car"
+queue "large-car"
+queue "any-car"
+
+"car (exchange)" -> "mini-car": "car.A"
+"car (exchange)" -> "large-car": "car.J"
+
+"mini-car" <- [Spring Consumer #1]
+"large-car" <- [Spring Consumer #1]
+
+"mini-car" <-- [Spring Consumer #2]
+"large-car" <-- [Spring Consumer #2]
+
+"car (exchange)" ---> "any-car": car.#
+
+"any-car" <-- [Spring Consumer Audit #1]
+"any-car" <-- [Spring Consumer Audit #2]
+"any-car" <-- [Spring Consumer Audit #3]
+@enduml

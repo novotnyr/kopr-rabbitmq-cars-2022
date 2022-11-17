@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>sk.upjs.ics.kopr</groupId>
-    <artifactId>producer</artifactId>
+    <artifactId>rabbitmq-producer</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -26,7 +26,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
